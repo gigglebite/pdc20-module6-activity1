@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+    <!-- handling string expressions -->
+    <!-- use of ng-model directive -->
+    <h1> 01. String Expressions with Directive ng-model</h1>
+      <label>Please Enter Your Name:</label>
+      <input type="text" ng-model="nameControl">
+      <h1>Hello {{nameControl}}!</h1>
+      <!-- data binding with ng-bind  -->
+      <p ng-bind="nameControl"></p>
+      <hr>
+    <!-- handling number expressions -->
+    <!-- use of ng-app and ng-init directive -->
+    <h1> 02. Number Expressions with Directives ng-app and ng-init</h1>
+    <div ng-app ng-init="value1=10; value2=15;">
+        <p> The sum of value 1 and value 2 is: {{ value1 + value2 }}.</p>
+    </div>
+    </div>
+  </body>
+</html>

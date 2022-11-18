@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <!-- another directive ng-init -->
+    <div ng-app ng-init="courseInfo={Course:'BSIT',yearLevel:'3rd'}">
+        <h1> 01. Course and Year Level </h1>
+        <!-- handling expressions with string -->
+        <p> I am a {{courseInfo.yearLevel}} year student pursuing {{courseInfo.Course}}.</p>
+    </div>
+    <hr>
+    <div ng-app>
+        <h1> 02. Sum of 3 Numbers with Currency Filter </h1>
+        <input type="number" ng-model="value1" placeholder="first number">
+        <input type="number" ng-model="value2" placeholder="second number">
+        <input type="number" ng-model="value3" placeholder="third number">
+        <!-- handling expressions with filter -->
+        <p>The sum of the 3 numbers inputted is: {{ value1 + value2 + value3|currency: 'Php '}}</p>
+    </div>
+    <hr>
+    <div ng-app>
+        <!-- another directive ng-model -->
+        <h1> 03. Name with Lowercase Filter </h1>
+        <input type="text" ng-model="nameControl" placeholder="Enter your name">
+        <!-- handling expressions with filter -->
+        <p>Hello, {{nameControl|lowercase}}</p>
+    </div>
+  </body>
+</html>
